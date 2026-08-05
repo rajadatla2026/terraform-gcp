@@ -1,5 +1,5 @@
 resource "google_storage_bucket" "gcs_bucket" {
-  name          = "bucket-for-terraform"
+  name          = "rajasekhar-terraform-bucket"
   location      = "US"
   storage_class = "STANDARD"
 
