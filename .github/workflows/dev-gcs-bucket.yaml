@@ -24,7 +24,7 @@ jobs:
       - name: checkout folder
         run: |
           pwd
-          cd /GCS-module/environment/dev
+          cd GCS-module/environments/dev
           pwd
           ls -la
       - name: terraform init
