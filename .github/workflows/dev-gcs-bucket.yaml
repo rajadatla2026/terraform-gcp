@@ -22,17 +22,21 @@ jobs:
 
       - uses: hashicorp/setup-terraform@v3
       - name: checkout folder
+        working-directory: GCS-module/environments/dev
         run: |
           pwd
           cd GCS-module/environments/dev
           pwd
           ls -la
       - name: terraform init
+        working-directory: GCS-module/environments/dev
         run: |
           terraform init
           terraform validate
       - name: terraform plan
+        working-directory: GCS-module/environments/dev
         run: terraform plan
       - name: terraform apply 
+        working-directory: GCS-module/environments/dev
         run: terraform apply --auto-approve
        
