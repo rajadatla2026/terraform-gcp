@@ -1,4 +1,4 @@
-name: Terraform
+name: Terraform-gcs-dev
 
 on:
   workflow_dispatch: 
