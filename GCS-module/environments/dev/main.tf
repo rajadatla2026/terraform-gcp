@@ -3,7 +3,7 @@ module "gcs_bucket" {
     project_id = var.project_id
     bucket_name = var.bucket_name
     region  = var.region
-    version = var.versioning
+    version = false
     labels = {
         environment = "dev"
         owner = "devops"

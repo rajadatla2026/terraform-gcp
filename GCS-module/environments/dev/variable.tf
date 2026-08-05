@@ -9,10 +9,10 @@ variable "bucket_name" {
   type = string
 }
 
-variable "versioning" {
+/*variable "versioning" {
   type = bool
   default = false
-}
+}*/
 
 variable "lifecycle_age" {
   type = number
