@@ -11,6 +11,7 @@ variable "bucket_name" {
 
 variable "versioning" {
   type = bool
+  default = false
 }
 
 variable "lifecycle_age" {
