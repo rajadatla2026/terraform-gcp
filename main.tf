@@ -1,16 +1,3 @@
-
-resource "google_service_account" "terraform_gcp_sa" {
-  account_id   = "sample-sa-account"
-  display_name = "sample-sa-account"
-  description  = "Service Account used by Terraform deployments"
-}
-resource "google_project_service" "compute_api" {
-  project = var.project_id
-  service = "compute.googleapis.com"
-
-  disable_on_destroy = false
-}
-
 # VPC Network
 resource "google_compute_network" "vpc" {
     name                    = var.vpc_name

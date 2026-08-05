@@ -21,11 +21,12 @@ jobs:
           service_account: github-sa@terraform-gcp-resources.iam.gserviceaccount.com
 
       - uses: hashicorp/setup-terraform@v3
-
-      - run: terraform init
-
-      - name: deleting the resoruces
+      - name: terraform init
         run: |
-          terraform plan
-          terraform destroy --auto-approve
+          terraform init
+          terraform validate
+      - name: deleting the resoruces
+        run: terraform plan
+      - name: terraform apply 
+        run: terraform apply --auto-approve
        
