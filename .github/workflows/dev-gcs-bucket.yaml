@@ -25,8 +25,6 @@ jobs:
         working-directory: GCS-module/environments/dev
         run: |
           pwd
-          cd GCS-module/environments/dev
-          pwd
           ls -la
       - name: terraform init
         working-directory: GCS-module/environments/dev
