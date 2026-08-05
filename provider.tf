@@ -7,10 +7,10 @@ terraform {
       version = "~> 6.0"
     }
   }
-  backend "gcs" {
+/*  backend "gcs" {
     bucket = "rajasekhar-terraform-bucket"
   }
-}
+}*/
 
 provider "google" {
   project = var.project_id
