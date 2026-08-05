@@ -1,0 +1,6 @@
+bucket_name     =  "first-bucket-dev-terraform"
+project_id      =   "terraform-gcp-resources"
+region          =   "us-central1"
+storage_class   =   "STANDARD"
+versioning      =   "false"
+lifecycle_age   =   "1"

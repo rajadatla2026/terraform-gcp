@@ -21,6 +21,12 @@ jobs:
           service_account: github-sa@terraform-gcp-resources.iam.gserviceaccount.com
 
       - uses: hashicorp/setup-terraform@v3
+      - name: checkout folder
+        run: |
+          pwd
+          cd /GCS-module/environment/dev
+          pwd
+          ls -la
       - name: terraform init
         run: |
           terraform init
