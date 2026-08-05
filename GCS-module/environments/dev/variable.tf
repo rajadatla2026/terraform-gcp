@@ -18,5 +18,5 @@ variable "lifecycle_age" {
   type = number
 }
 variable "storage_class" {
-    type = bool
+    type = string
 }
