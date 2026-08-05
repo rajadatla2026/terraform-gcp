@@ -23,5 +23,13 @@ jobs:
       - uses: hashicorp/setup-terraform@v3
 
       - run: terraform init
+
+      - name: import the existing resources
+        run: |
+          terraform import google_service_account.terraform_gcp_sa
+          terraform import google_storage_bucket.gcs_bucket
+          terraform import google_compute_network.vpc
+          terraform import google_compute_subnetwork.public_subnet
+          terraform import google_compute_subnetwork.private_subnet
       - run: terraform plan
       - run: terraform apply -auto-approve
