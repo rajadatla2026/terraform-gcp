@@ -1,8 +1,18 @@
+resource "google_project_service" "compute_api" {
+  project = var.project_id
+  service = "compute.googleapis.com"
+
+  disable_on_destroy = false
+}
+
 # VPC Network
 resource "google_compute_network" "vpc" {
-  name                    = var.vpc_name
-  auto_create_subnetworks = false
-  routing_mode            = "GLOBAL"
+    name                    = var.vpc_name
+    auto_create_subnetworks = false
+    routing_mode            = "GLOBAL"
+    depends_on = [
+        google_project_service.compute_api
+    ]
 }
 
 # Public Subnet
